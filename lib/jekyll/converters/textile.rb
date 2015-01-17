@@ -6,8 +6,15 @@ module Jekyll
       highlighter_prefix '<notextile>'
       highlighter_suffix '</notextile>'
 
+      DEFAULT_CONFIGURATION = {
+        'textile_ext' => 'textile',
+        'redcloth' => {
+          'hard_breaks' => true
+        }
+      }
+
       def initialize(config = {})
-        @config = config
+        @config = Jekyll::Utils.deep_merge_hashes(DEFAULT_CONFIGURATION, config)
         @setup = false
       end
 
@@ -21,15 +28,12 @@ module Jekyll
         raise Errors::FatalException.new("Missing dependency: RedCloth")
       end
 
-      def extname_matches_regexp
-        @extname_matches_regexp ||= Regexp.new(
-          '(' + @config['textile_ext'].gsub(',','|') +')$',
-          Regexp::IGNORECASE
-        )
+      def extname_list
+        @extname_list ||= @config['textile_ext'].split(',').map { |e| ".#{e}" }
       end
 
       def matches(ext)
-        ext =~ extname_matches_regexp
+        extname_list.include? ext.downcase
       end
 
       def output_ext(ext)

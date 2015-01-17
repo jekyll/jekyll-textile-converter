@@ -29,6 +29,15 @@ Lastly, add it to your `_config.yml` file:
 
 Plop in a file with YAML front matter and watch Jekyll gobble it up and spit out beautiful HTML.
 
+If you'd like to use a file extension other than `.textile`, you may
+specify a comma-separated list of extensions in your `_config.yml`, like this:
+
+    textile_ext: "textile,txtl,tl"
+
+If that is the given configuration, then all files with `.textile`,
+`.txtl`, and `.tl` file extensions will be read in and interpreted as
+Textile. They must still contain YAML front matter.
+
 ## Contributing
 
 1. Fork it ( https://github.com/jekyll/jekyll-textile-converter/fork )
