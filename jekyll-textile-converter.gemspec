@@ -8,9 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Jekyll::Textile::Converter::VERSION
   spec.authors       = ["Parker Moore"]
   spec.email         = ["parkrmoore@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Textile converter for Jekyll.}
+  spec.homepage      = "https://github.com/jekyll/jekyll-textile-converter"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
