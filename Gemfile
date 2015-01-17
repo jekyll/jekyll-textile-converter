@@ -5,8 +5,12 @@ gemspec
 
 gem "clash", "~> 1.0"
 
-if ENV["JEKYLL_BRANCH"]
-  gem "jekyll", github: "jekyll/jekyll", branch: ENV["JEKYLL_BRANCH"]
+if ENV["JEKYLL_VERSION"]
+  if ENV["JEKYLL_VERSION"].eql?("tip")
+    gem "jekyll", github: "jekyll/jekyll", branch: ENV["JEKYLL_BRANCH"]
+  else
+    gem "jekyll", "2.5.3"
+  end
 else
   gem "jekyll", ">= 2.0"
 end

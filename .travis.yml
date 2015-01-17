@@ -9,3 +9,6 @@ before_script: bundle update
 script: script/cibuild
 notifications:
   email: false
+env:
+  - JEKYLL_VERSION=tip
+  - JEKYLL_VERSION=latest

@@ -1,2 +1,2 @@
 #!/bin/bash
-script/test $@
+script/test $@ && script/clash
