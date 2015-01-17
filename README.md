@@ -1,6 +1,8 @@
 # Jekyll::Textile::Converter
 
-TODO: Write a gem description
+Convert your `.textile` Jekyll content. For Jekyll 3.0 and up.
+
+[![Build Status](https://travis-ci.org/jekyll/jekyll-textile-converter.svg?branch=master)](https://travis-ci.org/jekyll/jekyll-textile-converter)
 
 ## Installation
 
@@ -18,13 +20,18 @@ Or install it yourself as:
 
     $ gem install jekyll-textile-converter
 
+Lastly, add it to your `_config.yml` file:
+
+    gems:
+    - jekyll-textile-converter
+
 ## Usage
 
-TODO: Write usage instructions here
+Plop in a file with YAML front matter and watch Jekyll gobble it up and spit out beautiful HTML.
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/jekyll-textile-converter/fork )
+1. Fork it ( https://github.com/jekyll/jekyll-textile-converter/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
