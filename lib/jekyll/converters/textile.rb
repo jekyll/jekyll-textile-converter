@@ -6,6 +6,11 @@ module Jekyll
       highlighter_prefix '<notextile>'
       highlighter_suffix '</notextile>'
 
+      def initialize(config = {})
+        @config = config
+        @setup = false
+      end
+
       def setup
         return if @setup
         require 'redcloth'
