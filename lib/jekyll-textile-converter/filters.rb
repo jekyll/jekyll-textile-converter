@@ -7,7 +7,11 @@ module Jekyll
     # Returns the HTML formatted String.
     def textilize(input)
       site = @context.registers[:site]
-      converter = site.find_converter_instance(Jekyll::Converters::Textile)
+      converter = if site.respond_to?(:find_converter_instance)
+        site.find_converter_instance(Jekyll::Converters::Textile)
+      else
+        site.getConverterImpl(Jekyll::Converters::Textile)
+      end
       converter.convert(input)
     end
   end
