@@ -11,4 +11,5 @@ notifications:
   email: false
 env:
   - JEKYLL_VERSION=tip
-  - JEKYLL_VERSION=latest
+  - JEKYLL_VERSION=3.0
+  - JEKYLL_VERSION=2.0
