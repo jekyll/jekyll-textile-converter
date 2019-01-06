@@ -1,8 +1,7 @@
 language: ruby
 rvm:
-  - 2.0
-  - 2.1
-  - 2.2
+  - 2.6
+  - 2.4
 sudo: false
 cache: bundler
 before_script: bundle update
@@ -11,5 +10,5 @@ notifications:
   email: false
 env:
   - JEKYLL_VERSION=tip
-  - JEKYLL_VERSION=3.0
+  - JEKYLL_VERSION=3.7
   - JEKYLL_VERSION=2.0
