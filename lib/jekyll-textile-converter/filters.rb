@@ -14,5 +14,6 @@ module Jekyll
       end
       converter.convert(input)
     end
+  alias_method :textilize, :textile
   end
 end
