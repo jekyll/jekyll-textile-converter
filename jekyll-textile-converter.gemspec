@@ -1,7 +1,6 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'jekyll-textile-converter/version'
+# frozen_string_literal: true
+
+require_relative "lib/jekyll-textile-converter/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-textile-converter"
