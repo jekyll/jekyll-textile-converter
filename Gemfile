@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in jekyll-textile-converter.gemspec
 gemspec
 
-gem "clash", "~> 1.0"
+gem "clash", "~> 2.3"
 
 if ENV["JEKYLL_VERSION"]
   if ENV["JEKYLL_VERSION"].eql?("tip")
