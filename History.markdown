@@ -1,3 +1,9 @@
+## HEAD
+
+### Documentation
+
+  * Update README.md (#9)
+
 ## 0.1.0 / 2014-01-17
 
   * First working iteration.
