@@ -29,7 +29,12 @@ module Jekyll
       end
 
       def extname_list
-        @extname_list ||= @config['textile_ext'].split(',').map { |e| ".#{e}" }
+        case @config['textile_ext']
+          when String
+            @extname_list ||= @config['textile_ext'].split(',').map { |e| ".#{e}" }
+          when Array
+            @extname_list ||= @config['textile_ext'].map { |e| ".#{e}" }
+        end
       end
 
       def matches(ext)

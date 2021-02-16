@@ -41,6 +41,16 @@ specify a comma-separated list of extensions in your `_config.yml`, like this:
 textile_ext: "textile,txtl,tl"
 ```
 
+
+You can also use an array:
+
+```yaml
+textile_ext:
+   - textile
+   - txtl
+   - tl
+```
+
 If that is the given configuration, then all files with `.textile`,
 `.txtl`, and `.tl` file extensions will be read in and interpreted as
 Textile. They must still contain YAML front matter.
