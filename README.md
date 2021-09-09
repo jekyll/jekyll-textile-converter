@@ -14,16 +14,21 @@ gem 'jekyll-textile-converter'
 
 And then execute:
 
-    $ bundle
+```sh
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install jekyll-textile-converter
-
+```sh
+$ gem install jekyll-textile-converter
+```
 Lastly, add it to your `_config.yml` file:
 
-    plugins:
+```yaml
+plugins:
     - jekyll-textile-converter
+```
 
 ## Usage
 
@@ -32,7 +37,9 @@ Plop in a file with YAML front matter and watch Jekyll gobble it up and spit out
 If you'd like to use a file extension other than `.textile`, you may
 specify a comma-separated list of extensions in your `_config.yml`, like this:
 
-    textile_ext: "textile,txtl,tl"
+```yaml
+textile_ext: "textile,txtl,tl"
+```
 
 
 You can also use an array:
